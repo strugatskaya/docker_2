@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  superDB:
+    image: postgres
+    ports:
+      - '5432:5432'
+    restart: always
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      - POSTGRES_DB=superDB
+      - POSTGRES_USER=duke
+      - POSTGRES_PASSWORD=iddqd
